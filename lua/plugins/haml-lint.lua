@@ -15,7 +15,8 @@ return {
       linters = {
         hamllint = {
           cmd = "haml-lint",
-          args = { "-p" },
+          args = { "--parallel", "--stdin", function () return vim.api.nvim_buf_get_name(0) end },
+          stdin = true,
           stream = "stdout",
           ignore_exitcode = true,
           parser = require("lint.parser").from_pattern(pattern, groups, severity_map),
