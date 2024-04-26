@@ -14,8 +14,17 @@ return {
       },
       linters = {
         hamllint = {
-          cmd = "haml-lint",
-          args = { "--parallel", "--stdin", function () return vim.api.nvim_buf_get_name(0) end },
+          cmd = "bundle",
+          args = {
+            "exec",
+            "--",
+            "haml-lint",
+            "--parallel",
+            "--stdin",
+            function()
+              return vim.api.nvim_buf_get_name(0)
+            end,
+          },
           stdin = true,
           stream = "stdout",
           ignore_exitcode = true,
