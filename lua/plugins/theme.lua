@@ -1,10 +1,10 @@
 return {
-  { "AlexvZyl/nordic.nvim" },
+  { "rebelot/kanagawa.nvim" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = 'nordic'
+      colorscheme = 'kanagawa-lotus'
     }
   }
 }
