@@ -4,7 +4,8 @@ return {
     opts = {
       servers = {
         solargraph = {
-          autostart = false
+          autostart = false,
+          mason = false
         },
         ruby_lsp = {},
       },
