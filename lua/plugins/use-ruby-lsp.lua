@@ -7,6 +7,10 @@ return {
           autostart = false,
           mason = false
         },
+        rubocop = {
+          autostart = false,
+          mason = false
+        },
         ruby_lsp = {},
       },
     },
